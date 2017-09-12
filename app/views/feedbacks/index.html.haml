@@ -1,0 +1,17 @@
+.row
+  .col-xs-12.col-md-6.text-center
+    %h3
+      Avg. Rate
+    %h3
+      = Feedback.average_rating
+  .col-xs-12.col-md-6.text-center
+    %h3
+      Total Rate
+    %h3
+      = Feedback.count
+
+.panel.panel-primary
+  .panel-heading
+    %h3.panel-title List of feedbacks
+  .panel-body
+    = datagrid_table(@feedbacks_grid)
