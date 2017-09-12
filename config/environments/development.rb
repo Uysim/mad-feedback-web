@@ -52,4 +52,18 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.delivery_method = :letter_opener
+  # config.action_mailer.delivery_method = :smtp
+
+  # config.action_mailer.smtp_settings = {
+  #   address:               'email-smtp.us-east-1.amazonaws.com',
+  #   authentication:        :login,
+  #   user_name:             ENV['AWS_SES_USER_NAME'],
+  #   password:              ENV['AWS_SES_PASSWORD'],
+  #   enable_starttls_auto:  true,
+  #   port:                  465,
+  #   openssl_verify_mode:   OpenSSL::SSL::VERIFY_NONE,
+  #   ssl:                   true,
+  #   tls:                   true
+  # }
+
 end
