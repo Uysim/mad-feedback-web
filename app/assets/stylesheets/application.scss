@@ -1,4 +1,15 @@
 @import 'bootstrap-generators';
+@import 'bootstrap-datepicker3';
 th.comments, td.comments{
   width: 30%
+}
+
+.rang-filter{
+  label {
+    display: block;
+  }
+  .form-control{
+    width: 49%;
+    display: inline-block;
+  }
 }

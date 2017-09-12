@@ -1,4 +1,14 @@
 class Feedback < ApplicationRecord
+  SUBMITTERS = ['Client', 'Employee']
+
+  CATEGORIES = [
+    'Quality',
+    'Speed',
+    'Value',
+    'Creativity',
+    'Strategy'
+  ]
+
   validates :submitter, presence: true
   validates :rating,    presence: true
   validates :category,  presence: true

@@ -3,15 +3,23 @@
     %h3
       Avg. Rate
     %h3
-      = Feedback.average_rating
+      = @feedbacks_grid.assets.average_rating
   .col-xs-12.col-md-6.text-center
     %h3
       Total Rate
     %h3
-      = Feedback.count
+      = @feedbacks_grid.assets.count
 
 .panel.panel-primary
   .panel-heading
     %h3.panel-title List of feedbacks
   .panel-body
+    = datagrid_form_for @feedbacks_grid, :url => feedbacks_path
     = datagrid_table(@feedbacks_grid)
+
+
+:coffeescript
+  $(document).ready ->
+    $('.date_filter').datepicker
+      format: 'yyyy-mm-dd'
+
